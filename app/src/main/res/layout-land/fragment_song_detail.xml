@@ -91,13 +91,14 @@
             app:albumId="@{viewModel.currentData.albumId}"
             app:height="@{GeneralUtils.INSTANCE.screenHeight-GeneralUtils.INSTANCE.screenHeight/4}"
             app:recycled="@{true}"
+            app:state="@{safeUnbox(viewModel.currentState.state)}"
             app:width="@{GeneralUtils.INSTANCE.screenHeight-GeneralUtils.INSTANCE.screenHeight/4}" />
 
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/global_padding_top"
-            android:layout_marginEnd="@dimen/global_padding_top"
+            android:layout_marginStart="@dimen/margin_12"
+            android:layout_marginEnd="@dimen/margin_12"
             android:elevation="5dp"
             app:layout_constraintBottom_toTopOf="@id/btn_container"
             app:layout_constraintEnd_toEndOf="@id/view"
@@ -152,10 +153,9 @@
                 app:animateExpansion="true"
                 app:chunkHeight="30dp"
                 app:chunkRadius="1dp"
-                app:chunkSpacing="3dp"
-                app:chunkWidth="1dp"
+                app:chunkSpacing="1dp"
+                app:chunkWidth="2dp"
                 app:minChunkHeight="2dp"
-                app:touchable="true"
                 app:raw="@{viewModel.raw}"
                 app:waveColor="?colorAccent" />
         </RelativeLayout>

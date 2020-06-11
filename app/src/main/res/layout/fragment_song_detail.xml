@@ -94,8 +94,8 @@
             app:layout_constraintTop_toBottomOf="@+id/toolbar"
             app:recycled="@{true}"
             app:state="@{safeUnbox(viewModel.currentState.state)}"
-            app:width="@{GeneralUtils.INSTANCE.screenWidth-50}"
-            app:height="@{GeneralUtils.INSTANCE.screenWidth-50}"/>
+            app:height="@{GeneralUtils.INSTANCE.screenWidth}"
+            app:width="@{GeneralUtils.INSTANCE.screenWidth}" />
 
         <RelativeLayout
             android:layout_width="0dp"

@@ -74,13 +74,13 @@ class SongDetailViewModel(
 
     private val nowMediaMetadataObserver = Observer<MediaMetadataCompat> { mediaMetaData ->
         mediaMetaData?.let {
-            currentDataBase.postValue(MediaItemData.pullMediaMetadata(it))
+            currentDataBase.postValue(MediaItemData.pullMediaMetadata(it) ?: return@let)
         }
     }
 
     private val lastMediaMetadataObserver = Observer<MediaMetadataCompat> { mediaMetaData ->
         mediaMetaData?.let {
-            lastDataBase.postValue(MediaItemData.pullMediaMetadata(it))
+            lastDataBase.postValue(MediaItemData.pullMediaMetadata(it) ?: return@let)
         }
     }
 
